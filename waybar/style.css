@@ -1,0 +1,136 @@
+* {
+    border: none;
+    border-radius: 0;
+    text-shadow: 2px 2px 4px #000000;
+    background-color: transparent;
+    font-family: "Ubuntu Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(0, 10, 10, 0.05);
+    color: white;
+}
+
+#window {
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: "Ubuntu";
+    background: transparent;
+}
+/*
+#workspaces {
+    padding: 0 5px;
+}
+*/
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-top: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    color: #15b79a;
+    background: transparent;
+    border-top: 2px solid #dd545d;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+    background: transparent;
+    padding: 0 3px;
+    margin: 0 5px;
+}
+
+#clock {
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#battery {
+    border-radius: 6px;
+    /*color: rgb(40, 150, 200);*/
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging {
+    border-radius: 6px;
+    color: #6add77;
+}
+
+@keyframes blink {
+    to {
+        /*background-color: rgba(0, 10, 10, 0.25);*/
+        color: red;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    border-radius: 6px;
+    color: #c997d8;
+}
+
+#memory {
+    border-radius: 6px;
+    color: yellow;
+}
+
+#network {
+    border-radius: 6px;
+    color: cyan;
+}
+
+#network.disconnected {
+    border-radius: 6px;
+    color: red;
+}
+
+#pulseaudio {
+    color: rgb(210, 160, 100);
+}
+
+#pulseaudio.muted {
+    color: red;
+}
+
+#custom-spotify {
+    font-size: 16;
+    background-color: rgba(0, 10, 10, 0.20);
+    border-radius: 6px;
+    text-shadow: 2px 2px 2px #000000;
+    color: rgb(50, 170, 100);
+    margin: 1px 10px;
+}
+
+#tray {
+}
+
+
